@@ -62,5 +62,15 @@
     - The rest parameter syntax allows us to represent an indefinite number of arguments as an array.
     - It is denoted by three dots (...).
     - Rest parameter is a feature introduced in ES6.
+
+    10. What is callback functions
+    - The function are passed as arguments to other functions, then this function is called inside outer functions
+      to perform some kind of routin or action.
+    - Callback functions are commonly used with asynchronous operations like setTimeout, setInterval, and fetch API.
+
+    11. What is Arrow function
+    - Arrow function is a compact syntax for writing anonymous functions.
+    - Arrow function does not have its own 'this' value, instead it uses the 'this' value of the enclosing scope.
+    - Arrow function does not have its own arguments object, instead it uses the arguments object of the enclosing scope.
     
 */
