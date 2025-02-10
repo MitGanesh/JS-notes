@@ -149,3 +149,20 @@ console.log(sum(56, 86));
 console.log("0" == 0);
 console.log(0 == []);
 console.log("0" == []);
+
+// Q- Create a counter using closures.
+
+const counterFun = () => {
+  let _count = 0;
+
+  const incrementCount = () => ++_count;
+  const decrementCount = () => --_count;
+  return {
+    incrementCount,
+    decrementCount,
+  };
+};
+
+const counter = counterFun();
+
+console.log(counter.incrementCount());
