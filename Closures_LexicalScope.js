@@ -166,3 +166,20 @@ const counterFun = () => {
 const counter = counterFun();
 
 console.log(counter.incrementCount());
+
+// Live Refrece closuer
+
+function my_secret(secret) {
+  return {
+    getSecret: () => secret,
+    setSecret: (newSecret) => {
+      secret = newSecret;
+    },
+  };
+}
+
+const person1_secret = my_secret("Person 1");
+
+console.log(person1_secret.getSecret());
+console.log(person1_secret.setSecret("Person 1 Secret Update"));
+console.log(person1_secret.getSecret());

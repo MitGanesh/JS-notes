@@ -103,10 +103,24 @@ Array.prototype.myFilter = function (callback) {
   return result;
 };
 
+Array.prototype.myReduce = function (callback, initialValue = 0) {
+  let accumulator = initialValue;
+
+  for (let i = 0; i < this.length; i++) {
+    accumulator = accumulator
+      ? callback(accumulator, this[i], i, this)
+      : this[i];
+  }
+
+  return accumulator;
+};
+
 const arr = [1, 2, 3, 4, 5, 6];
 
 const ans = arr.myMap((ele, i) => {
   return ele * i;
 });
 
-console.log(ans);
+const sum = arr.myReduce((acc, curr) => acc + curr);
+
+console.log(sum);

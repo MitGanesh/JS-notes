@@ -57,6 +57,7 @@ const test = {
   a: 100,
   b: 200,
   name: "TEST OBJ",
+  c: NaN, // In this case it will break
 };
 
 function multiplyByTwo(obj) {
@@ -108,6 +109,7 @@ console.log(c.gretting); // -> 'Hey it's D'
 
 // Q-7 What is the output
 
+// The below lines always return false
 console.log({ a: 1 } == { a: 1 });
 console.log({ a: 1 } === { a: 1 });
 
